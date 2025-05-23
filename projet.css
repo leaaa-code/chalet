@@ -142,7 +142,7 @@
   }
   
   .reservation button {
-    background-color: #27ae60;
+    
     color: #fff;
     border: none;
     cursor: pointer;
@@ -158,8 +158,6 @@
   .map iframe {
     width: 100%;
     height: 300px
-  
- 
 
   }
 
@@ -168,6 +166,8 @@
     font-family: 'Segoe UI', sans-serif;
     background: #fff;
     border-bottom: 1px solid #ddd;
+    color: #333;
+    
   }
   
   /* Top Header */
@@ -178,6 +178,7 @@
     padding: 10px 5%;
     font-size: 14px;
     color: #6e6e8a;
+   
   }
   
   .left-section select {
@@ -217,38 +218,42 @@
     font-weight: bold;
     font-size: 15px;
   }
-  
-  /* Bottom Navbar */
-  .main-nav {
-    border-top: 1px solid #ddd;
-    padding: 10px 5%;
-    text-align: center;
+  .main-nav{
+    background-color: #333;
   }
-  
   .main-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: inline-flex;
-    gap: 25px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .main-nav ul li {
+    position: relative;
   }
   
   .main-nav a {
+    color: #faf9f7;
     text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    padding-bottom: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 5px 10px;
+    display: block;
+    transition: background-color 0.3s ease;
   }
   
+  .main-nav a:hover,
   .main-nav a.active {
-    border-bottom: 2px solid #c99973;
+    background-color: #a48a6d;
+    border-radius: 5px;
   }
-
-
-
-
-.dropdown {
+  
+  /* Dropdown styles from your snippet */
+  .dropdown {
     position: relative;
+    
   }
   
   .dropdown-content {
@@ -261,6 +266,8 @@
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
   
   .dropdown-content li {
@@ -278,18 +285,6 @@
   
   .dropdown-content a:hover {
     background-color: #f0f0f0;
-  }
-  
-  /* Show dropdown on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-
-  .dropdown-content {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
   }
   
   .dropdown:hover .dropdown-content {

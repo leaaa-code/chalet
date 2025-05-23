@@ -24,3 +24,24 @@ document.getElementById('reservation-form').addEventListener('submit', function 
   // Optionally, reset the form
   document.getElementById('reservation-form').reset();
 });
+
+function switchLanguage(select) {
+  const lang = select.value;
+  if (lang === 'en') {
+    window.location.href = 'project-en.html'; // your English page file
+  } else {
+    window.location.href = 'project.html'; // your French page file
+  }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const path = window.location.pathname;
+  const langSelect = document.querySelector('.lang-select');
+  if (!langSelect) return; // safety check
+
+  if (path.includes('-en')) {
+    langSelect.value = 'en';
+  } else {
+    langSelect.value = 'fr';
+  }
+});

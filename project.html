@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,19 +7,17 @@
   <link rel="stylesheet" href="projet.css" />
 </head>
 
+
+
 <header class="header-container">
     <div class="top-header">
       <div class="left-section">
-        <select class="lang-select">
-          <option>Français</option>
-          <option>English</option>
-        </select>
-        <select class="currency-select">
-          <option>EUR</option>
-          <option>USD</option>
+        <select class="lang-select" onchange="switchLanguage(this)">
+          <option value="fr">Français</option>
+          <option value="en">English</option>
         </select>
         <span class="phone">
-          📞 +33 
+          📞 +33 6 60 89 15 84
         </span>
       </div>
   
@@ -34,9 +32,9 @@
   
     <nav class="main-nav">
       <ul>
-        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="project.html" class="active">Accueil</a></li>
         
-        <!--gives the different options of the chalet-->>
+        <!--gives the different options of the chalet-->
         <li class="dropdown">
             <a href="#">Le Chalet ▼</a>
             <ul class="dropdown-content">
@@ -47,10 +45,11 @@
           </li>
         <li><a href="tarif.html">Nos tarifs </a></li>
         <li><a href="avis.html">Avis clients </a></li>
-        <li><a href="reservation.html">Dispos & Réservation </a></li>
+        <li><a href="reservation.html">Disponibilités & Réservation </a></li>
       </ul>
     </nav>
   </header>
+  
   
 <body>
   <section class="hero">
@@ -89,9 +88,9 @@
     <ul>
       <li>Surface : 200 m²</li>
       <li>Capacité : 14 personnes</li>
-      <li>Chambres : 5 (4 chambres doubles, 1 dortoir de 6 lits)</li>
+      <li>Chambres : 5</li>
       <li>Salles de bain : 3</li>
-      <li>WC : 2</li>
+      <li>Sanitaires : 2</li>
       <li>Terrasse avec table extérieure et transats</li>
       <li>Salle de jeux avec baby-foot et Xbox</li>
       <li>Salle de sport avec rameur et elliptique</li>
@@ -163,6 +162,8 @@
       <li>Montant des charges : <strong>Incluses</strong></li>
       <li>Taxe de séjour : <strong>Incluses</strong></li>
       <li>Numéro de déclaration en mairie : <strong>INFORMATION OBLIGATOIRE</strong></li>
+      <li>
+        <strong>Conditions d'annulation</strong> : Annulation impossible hors cas de force majeure, (Le locataire doit prendre une assurance annulation). </li>
     </ul>
   </section>
   
@@ -195,8 +196,8 @@
   <section class="contact">
     <h2>Contact</h2>
     <p>Address: 619 Route du Boule, 73590 Saint-Nicolas-la-Chapelle, France</p>
-    <p>Phone: +33 </p>
-    <p>Email:x@g.com
+    <p>Téléphone: +33 </p>
+    <p>Email:alinebarrois1973@gmail.com
     <div class="map">
       <!-- Embed Google Map -->
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2775.1050446992155!2d6.475802676544056!3d45.80372297108168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ba771268debe3%3A0x72c772746cbdfdc9!2s619%20Rte%20du%20Boule%2C%2073590%20Saint-Nicolas-la-Chapelle%2C%20France!5e0!3m2!1sfr!2sfr!4v1713459410287!5m2!1sfr!2sfr"></iframe>
@@ -204,5 +205,6 @@
   </section>
 
   <script src="projet.js"></script>
+
 </body>
 </html>
