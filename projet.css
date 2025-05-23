@@ -429,4 +429,33 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
   
+  /* Avis clients */
+#avis ul {
+  list-style: none;
+  padding: 0;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+#avis li {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+#avis .reviewer {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #6e6e8a;
+}
+
+#avis .stars {
+  color: #c99973;
+  margin-left: 5px;
+}
+
   
