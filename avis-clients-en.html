@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Reviews – Chalet</title>
+  <link rel="stylesheet" href="projet.css" />
+  <script>
+    function switchLanguage(select) {
+      // Your language-switching logic here
+      console.log('Selected language:', select.value);
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header-container">
+    <div class="top-header">
+      <div class="left-section">
+        <select class="lang-select" onchange="switchLanguage(this)">
+          <option value="en" selected>English</option>
+          <option value="fr">Français</option>
+        </select>
+        <span class="phone">📞 +33 6 60 89 15 84</span>
+      </div>
+  
+      <div class="logo-section">
+        <img src="alps.jpg" alt="Chalet Logo" class="logo">
+      </div>
+  
+      <div class="cta-section">
+        <a href="reservation.html" class="reserve-btn">Book Now</a>
+      </div>
+    </div>
+  
+    <nav class="main-nav">
+      <ul>
+        <li><a href="project.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">The Chalet ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="photos.html">Photos</a></li>
+          </ul>
+        </li>
+        <li><a href="rates.html">Rates</a></li>
+        <li><a href="reviews.html" class="active">Reviews</a></li>
+        <li><a href="reservation.html">Availability & Booking</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero for Reviews page -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>What Our Guests Say</h1>
+      <p>Read feedback from our guests after their stay at the Refuge des Ours.</p>
+      <a href="#reviews" class="btn">See Reviews</a>
+    </div>
+  </section>
+
+  <!-- Customer Reviews Section -->
+  <section id="reviews" class="features">
+    <h2>Guest Reviews</h2>
+    <ul>
+      <li>
+        <p>“An incredible experience! The team is attentive and the service is flawless.”</p>
+        <div class="reviewer">
+          <strong>Jean Dupont</strong> — <span class="stars">★★★★★</span>
+        </div>
+      </li>
+      <li>
+        <p>“Stunning setting, delicious dishes, and a warm welcome. I highly recommend it!”</p>
+        <div class="reviewer">
+          <strong>Marie Durand</strong> — <span class="stars">★★★★☆</span>
+        </div>
+      </li>
+      <li>
+        <p>“A wonderful find, excellent value for money. We will happily return.”</p>
+        <div class="reviewer">
+          <strong>Paul Martin</strong> — <span class="stars">★★★★★</span>
+        </div>
+      </li>
+      <li>
+        <p>“Fast and attentive service, and the decor is truly charming.”</p>
+        <div class="reviewer">
+          <strong>Laura Petit</strong> — <span class="stars">★★★★☆</span>
+        </div>
+      </li>
+      <li>
+        <p>“Our family loved the cozy atmosphere and the location was perfect for skiing right at our doorstep.”</p>
+        <div class="reviewer">
+          <strong>Emma Johnson</strong> — <span class="stars">★★★★★</span>
+        </div>
+      </li>
+      <li>
+        <p>“The chalet is beautifully decorated and the hosts were extremely welcoming. I highly recommend it!”</p>
+        <div class="reviewer">
+          <strong>Michael Smith</strong> — <span class="stars">★★★★☆</span>
+        </div>
+      </li>
+      <li>
+        <p>“An unforgettable stay! The team was very friendly and the surroundings are breathtaking.”</p>
+        <div class="reviewer">
+          <strong>María López</strong> — <span class="stars">★★★★★</span>
+        </div>
+      </li>
+      <li>
+        <p>“The chalet is beautiful, clean, and very comfortable. We will definitely be back.”</p>
+        <div class="reviewer">
+          <strong>Carlos García</strong> — <span class="stars">★★★★☆</span>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Footer / Contact Section -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Address: 619 Route du Boule, 73590 Saint-Nicolas-la-Chapelle, France</p>
+    <p>Phone: +33 6 60 89 15 84</p>
+    <p>Email: contact@refugedescours.fr</p>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2775.1050446992155!2d6.475802676544056!3d45.80372297108168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ba771268debe3%3A0x72c772746cbdfdc9!2s619%20Rte%20du%20Boule%2C%2073590%20Saint-Nicolas-la-Chapelle%2C%20France!5e0!3m2!1sen!2sus!4v1713459410287!5m2!1sen!2sus"
+        frameborder="0" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <script src="project.js" defer></script>
+</body>
+</html>
