@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chalet</title>
+  <link rel="stylesheet" href="projet.css" />
+</head>
+
+<header class="header-container">
+  <div class="top-header">
+    <div class="left-section">
+      <select class="lang-select">
+        <option>Français</option>
+        <option selected>English</option>
+      </select>
+      <select class="currency-select">
+        <option>EUR</option>
+        <option>USD</option>
+      </select>
+      <span class="phone">📞 +33 6 60 89 15 84</span>
+    </div>
+
+    <div class="logo-section">
+      <img src="alpes.jpg" alt="Chalet Logo" class="logo">
+    </div>
+
+    <div class="cta-section">
+      <a href="#reservation" class="reserve-btn">Book now</a>
+    </div>
+  </div>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li class="dropdown">
+        <a href="#">The Chalet ▼</a>
+        <ul class="dropdown-content">
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="photos.html">Photos</a></li>
+        </ul>
+      </li>
+      <li><a href="tarif.html">Rates</a></li>
+      <li><a href="avis.html">Guest Reviews</a></li>
+      <li><a href="reservation.html">Availability & Booking</a></li>
+    </ul>
+  </nav>
+</header>
+
+<body>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Luxury Chalet "Le Refuge des Ours"</h1>
+      <p>Charming Chalet less than 200m from the ski slopes.</p>
+      <a href="#reservation" class="btn">Book now</a>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>About the Chalet</h2>
+    <p>
+      Charming Chalet less than 200m from the ski slopes.  
+      Spacious living room on the ground floor for guests to enjoy time together.  
+      Open kitchen connected to the living and dining area (70 m²).  
+      Corner sofa that accommodates all guests.  
+      4 double bedrooms and 1 dormitory with 6 beds.  
+      Large terrace with outdoor table and sun loungers.
+    </p>
+    <div class="gallery">
+      <img src="images/chalet1.jpg" alt="Chalet Exterior" />
+      <img src="images/chalet2.jpg" alt="Living room" />
+      <img src="images/chalet3.jpg" alt="Bedrooms" />
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Features</h2>
+    <ul>
+      <li>Area: 200 m²</li>
+      <li>Capacity: 14 guests</li>
+      <li>Bedrooms: 5 (4 double rooms, 1 dormitory with 6 beds)</li>
+      <li>Bathrooms: 3</li>
+      <li>Toilets: 2</li>
+      <li>Terrace with outdoor table and loungers</li>
+      <li>Game room with foosball and Xbox</li>
+      <li>Gym with rower and elliptical</li>
+      <li>Private parking</li>
+      <li>Private ski room</li>
+    </ul>
+  </section>
+
+  <section class="services">
+    <h2>Services</h2>
+    <ul>
+      <li>Bed linen rental (€15)</li>
+      <li>Towel rental (€15)</li>
+      <li>Cleaning included</li>
+      <li>Firewood provided</li>
+      <li>Beds made on arrival (€30)</li>
+    </ul>
+  </section>
+
+  <section class="equipment">
+    <h2>Equipment</h2>
+    <ul>
+      <li>Oven</li>
+      <li>Washing machine</li>
+      <li>Dishwasher</li>
+      <li>Television</li>
+      <li>Microwave</li>
+      <li>Tumble dryer</li>
+      <li>WiFi Internet</li>
+      <li>Satellite receiver</li>
+      <li>Raclette grill</li>
+      <li>Freezer</li>
+    </ul>
+  </section>
+
+  <section class="pricing">
+    <h2>Prices & Availability</h2>
+    <table>
+      <tr>
+        <th>Week</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>March 29 - April 5</td>
+        <td>€3500</td>
+      </tr>
+      <tr>
+        <td>April 6 - April 13</td>
+        <td>€3000</td>
+      </tr>
+      <tr>
+        <td>December 20 - December 27</td>
+        <td>€4800</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="reservation" class="reservation">
+    <h2>Make a Reservation</h2>
+    <form id="reservation-form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <input type="tel" id="phone" placeholder="Your Phone Number" required />
+      <label for="checkin">Check-in Date:</label>
+      <input type="date" id="checkin" required />
+      <label for="checkout">Check-out Date:</label>
+      <input type="date" id="checkout" required />
+      <label for="guests">Select guests:</label>
+      <select
