@@ -45,3 +45,14 @@ window.addEventListener("DOMContentLoaded", () => {
     langSelect.value = 'fr';
   }
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+  const arrival = localStorage.getItem("arrivalDate");
+  const departure = localStorage.getItem("departureDate");
+
+  const checkin = document.getElementById("checkin");
+  const checkout = document.getElementById("checkout");
+
+  if (checkin && arrival) checkin.value = arrival;
+  if (checkout && departure) checkout.value = departure;
+});

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery - Le Refuge des Ours</title>
+  <link rel="stylesheet" href="projet.css">
+  <style>
+    .photo-gallery {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .photo-gallery h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      color: #a47f50;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+  <header class="header-container">
+    <div class="top-header">
+      <div class="left-section">
+        <select class="lang-select" onchange="switchLanguage(this)">
+          <option value="fr">Français</option>
+          <option value="en" selected>English</option>
+        </select>
+        <span class="phone">📞 +33 6 60 89 15 84</span>
+      </div>
+      <div class="logo-section">
+        <img src="alpes.jpg" alt="Chalet Logo" class="logo">
+      </div>
+      <div class="cta-section">
+        <a href="project.html#reservation" class="reserve-btn">Book now</a>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="project-en.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">The Chalet ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="room-en.html">Rooms</a></li>
+            <li><a href="services-en.html">Services</a></li>
+            <li><a href="photos-en.html" class="active">Photos</a></li>
+          </ul>
+        </li>
+        <li><a href="tarifs-en.html">Rates</a></li>
+        <li><a href="avis-clients-en.html">Guest Reviews</a></li>
+        
+
+      </ul>
+    </nav>
+  </header>
+
+  <section class="photo-gallery">
+    <h1>Photo Gallery</h1>
+    <div class="gallery-grid">
+      <img src="ext.jpg" alt="Chalet exterior">
+      <img src="salon.jpg" alt="Cozy living room">
+      <img src="2lits160.jpg" alt="Comfortable double bedroom">
+      <img src="1lit140.jpg" alt="Another double bedroom">
+      <img src="dortoir.jpg" alt="Spacious dormitory">
+      <img src="cuis.jpg" alt="Panoramic kitchen view">
+
+      <img src="escaliers.jpg" alt="Chalet staircase">
+      <img src="man.jpg" alt="Decor detail">
+      <img src="lin.jpg" alt="Double bed setup">
+      <img src="sal.jpg" alt="Warm lounge space">
+      <img src="ext2.jpg" alt="Another outdoor view">
+      <img src="1lit.jpg" alt="Room with one bed">
+      <img src="entree.jpg" alt="Main entrance">
+      <img src="palierrangement.jpg" alt="Landing and storage area">
+    </div>
+  </section>
+
+  <script src="projet.js"></script>
+</body>
+</html>

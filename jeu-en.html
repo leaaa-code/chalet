@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chalet Puzzle</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('entree.jpg') center/cover no-repeat fixed;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #f8f4ef;
+      text-shadow: 1px 1px 5px #000;
+    }
+    canvas {
+      border: 3px solid #a47f50;
+      background-color: #fffefb;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #f0e6dc;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <h1>Complete the chalet puzzle to win a promo code!</h1>
+  <canvas id="puzzle" width="400" height="400"></canvas>
+  <div id="message">Click the pieces to slide them into place.</div>
+
+  <script>
+    const canvas = document.getElementById('puzzle');
+    const ctx = canvas.getContext('2d');
+    const size = 400;
+    const rows = 4, cols = 4;
+    const pieceSize = size / rows;
+    const image = new Image();
+    image.src = 'entree.jpg';
+
+    let pieces = [];
+    let empty = { x: cols - 1, y: rows - 1 };
+
+    function drawPuzzle() {
+      ctx.clearRect(0, 0, size, size);
+      pieces.forEach(p => {
+        if (p.x !== empty.x || p.y !== empty.y) {
+          ctx.drawImage(
+            image,
+            p.sx, p.sy, pieceSize, pieceSize,
+            p.x * pieceSize, p.y * pieceSize, pieceSize, pieceSize
+          );
+        }
+      });
+    }
+
+    function scramble() {
+      pieces = [];
+      for (let y = 0; y < rows; y++) {
+        for (let x = 0; x < cols; x++) {
+          pieces.push({ x, y, sx: x * pieceSize, sy: y * pieceSize });
+        }
+      }
+      for (let i = 0; i < 200; i++) {
+        const neighbors = getNeighbors();
+        const move = neighbors[Math.floor(Math.random() * neighbors.length)];
+        movePiece(move);
+      }
+    }
+
+    function getNeighbors() {
+      const moves = [];
+      if (empty.x > 0) moves.push({ x: empty.x - 1, y: empty.y });
+      if (empty.x < cols - 1) moves.push({ x: empty.x + 1, y: empty.y });
+      if (empty.y > 0) moves.push({ x: empty.x, y: empty.y - 1 });
+      if (empty.y < rows - 1) moves.push({ x: empty.x, y: empty.y + 1 });
+      return moves;
+    }
+
+    function movePiece(pos) {
+      const index = pieces.findIndex(p => p.x === pos.x && p.y === pos.y);
+      if (index > -1) {
+        [pieces[index].x, pieces[index].y, empty.x, empty.y] = [empty.x, empty.y, pieces[index].x, pieces[index].y];
+      }
+    }
+
+    function checkWin() {
+      return pieces.every(p => p.x * pieceSize === p.sx && p.y * pieceSize === p.sy);
+    }
+
+    canvas.addEventListener('click', e => {
+      const x = Math.floor(e.offsetX / pieceSize);
+      const y = Math.floor(e.offsetY / pieceSize);
+      if (getNeighbors().some(n => n.x === x && n.y === y)) {
+        movePiece({ x, y });
+        drawPuzzle();
+        if (checkWin()) {
+          document.getElementById('message').textContent = "🎉 Congrats! Promo code: PUZZLECHALET2024";
+          localStorage.setItem("promoCode", "PUZZLECHALET2024");
+        }
+      }
+    });
+
+    image.onload = () => {
+      scramble();
+      drawPuzzle();
+    };
+  </script>
+</body>
+</html>

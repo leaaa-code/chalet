@@ -25,6 +25,30 @@
     color: white;
     text-align: center;
   }
+
+  .reserve-btn {
+    background-color: #a47f50;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .reserve-btn:hover {
+    background-color: #8c693a;
+  }
+  .cta-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+  }
+    
   
   .hero-content {
     max-width: 800px;
@@ -429,33 +453,4 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
   
-  /* Avis clients */
-#avis ul {
-  list-style: none;
-  padding: 0;
-  margin: 30px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-#avis li {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  text-align: left;
-}
-
-#avis .reviewer {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #6e6e8a;
-}
-
-#avis .stars {
-  color: #c99973;
-  margin-left: 5px;
-}
-
   

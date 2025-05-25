@@ -44,8 +44,8 @@
             </ul>
           </li>
         <li><a href="tarif.html">Nos tarifs </a></li>
-        <li><a href="avis.html">Avis clients </a></li>
-        <li><a href="reservation.html">Disponibilités & Réservation </a></li>
+        <li><a href="avis_clients.html">Avis clients </a></li>
+        <li><a href="jeu.html">Tentez votre chance! </a></li>
       </ul>
     </nav>
   </header>
@@ -71,15 +71,41 @@
           Il dispose de 4 chambres doubles et d’un dortoir de 6 lits, ainsi qu’une grande terrasse équipée pour vos repas et vos siestes au soleil.
         </p>
       </div>
-      <div class="about-gallery">
-        <img src="images/chalet1.jpg" alt="Chalet Exterior" />
-        <img src="images/chalet2.jpg" alt="Living Room" />
-        <img src="images/chalet3.jpg" alt="Bedroom" />
+      <div class="about-gallery grid-layout">
+        <img src="ext.jpg" alt="Vue extérieure du chalet" />
+        <img src="salon.jpg" alt="Salon spacieux et chaleureux" />
+        <img src="2lits160.jpg" alt="Chambre double confortable" />
       </div>
     </div>
   </section>
   
-
+  <style>
+    .about-gallery.custom-layout {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .about-gallery .row {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+    }
+  
+    .about-gallery .row.center {
+      justify-content: center;
+    }
+  
+    .about-gallery img {
+      width: 100%;
+      max-width: 480px;
+      height: 220px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      object-fit: cover;
+    }
+  </style>
 
 
   <!-- Caractéristiques -->
@@ -128,28 +154,6 @@
     </ul>
   </section>
 
-  <!-- Tarifs et disponibilités -->
-  <section class="pricing">
-    <h2>Tarifs & Disponibilités</h2>
-    <table>
-      <tr>
-        <th>Semaine</th>
-        <th>Prix</th>
-      </tr>
-      <tr>
-        <td>29/03 - 05/04</td>
-        <td>3500€</td>
-      </tr>
-      <tr>
-        <td>06/04 - 13/04</td>
-        <td>3000€</td>
-      </tr>
-      <tr>
-        <td>20/12 - 27/12</td>
-        <td>4800€</td>
-      </tr>
-    </table>
-  </section>
 
   <section class="infos-complementaires">
     <h2>Informations complémentaires</h2>
@@ -187,7 +191,7 @@
         <option value="6-10">6-10</option>
         <option value="11-15">11-15</option>
       </select>
-      <button type="submit">Envoyez</button>
+      <button style= "background-color: burlywood;" type="submit">Envoyez</button>
     </form>
     <p id="confirmation"></p>
   </section>
@@ -196,7 +200,7 @@
   <section class="contact">
     <h2>Contact</h2>
     <p>Address: 619 Route du Boule, 73590 Saint-Nicolas-la-Chapelle, France</p>
-    <p>Téléphone: +33 </p>
+    <p>Téléphone: +33 6 60 89 15 84 </p>
     <p>Email:alinebarrois1973@gmail.com
     <div class="map">
       <!-- Embed Google Map -->
