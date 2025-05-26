@@ -176,24 +176,23 @@
   <!-- Reservation Form -->
   <section id="reservation" class="reservation">
     <h2>Faire une réservation</h2>
-    <form id="reservation-form">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Your Email" required />
-      <input type="tel" id="phone" placeholder="Your Phone Number" required />
+    <form action="https://formspree.io/f/xbloverq" method="POST">
+      <input type="text" name="name" placeholder="Votre nom" required />
+      <input type="email" name="email" placeholder="Votre email" required />
+      <input type="tel" name="phone" placeholder="Votre téléphone" required />
       <label for="checkin">Date d'arrivée :</label>
-      <input type="date" id="checkin" required />
+      <input type="date" name="checkin" required />
       <label for="checkout">Date de départ :</label>
-      <input type="date" id="checkout" required />
-      <label for="guests">Sélectionnez</label>
-      <select id="guests" required>
-        <option value="">Select</option>
+      <input type="date" name="checkout" required />
+      <label for="guests">Nombre de personnes :</label>
+      <select name="guests" required>
+        <option value="">Sélectionner</option>
         <option value="1-5">1-5</option>
         <option value="6-10">6-10</option>
         <option value="11-15">11-15</option>
       </select>
-      <button style= "background-color: burlywood;" type="submit">Envoyez</button>
+      <button style="background-color: burlywood;" type="submit">Envoyer</button>
     </form>
-    <p id="confirmation"></p>
   </section>
 
   <!-- Contact Information -->
